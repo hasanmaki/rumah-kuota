@@ -8,6 +8,7 @@ dependencies = [
     "mkdocs-glightbox>=0.5.2",
     "mkdocs-material>=9.7.1",
     "mkdocstrings>=1.0.0",
+    "mkdocstrings-python>=2.0.1",
     "yamllint>=1.37.1",
 ]
 
