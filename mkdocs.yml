@@ -1,0 +1,103 @@
+# mkdocs serve --livereload
+site_name: Kas Digital Documentation
+
+site_author: Hasan Maki
+site_description: Dokumentasi penggunaan Otomax,
+site_url: https://example.com/
+plugins:
+  - offline
+  - search
+  - mkdocstrings
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: auto
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
+      background: white
+      shadow: true
+      manual: false
+nav:
+  - Beranda: index.md
+  - Backend:
+      - Server:
+          - Otomax: backend/server/otomax.md
+      - Network:
+          - Config: network/jaringan.md
+
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: JetBrains Mono
+  logo: assets/img/logo/logo_1.png
+  favicon: assets/img/logo/favicon.ico
+  features:
+    - search.highlight
+    - content.code.copy
+    - search.suggest
+    - content.code.annotate
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - content.tooltips
+  palette:
+    # Dark mode colors
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: dark mode
+      primary: light blue
+      accent: deep orange
+    # Light mode colors
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: light mode
+      primary: light blue
+      accent: deep orange
+
+markdown_extensions:
+  - attr_list
+  - markdown.extensions.def_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - admonition
+  - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - md_in_html
+  - pymdownx.blocks.caption
+  - abbr
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hasanmaki
+extra_css:
+  - extra.css
+
+copyright: © 2026 Hasan Maki. All rights reserved.
